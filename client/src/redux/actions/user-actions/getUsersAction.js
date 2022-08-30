@@ -1,4 +1,4 @@
-import { GET_USERS } from "../types/types";
+import { GET_USERS } from "../../types/types";
 import axios from "axios";
 
 const getUsers = (users) => {

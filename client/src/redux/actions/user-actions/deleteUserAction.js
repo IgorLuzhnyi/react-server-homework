@@ -1,4 +1,4 @@
-import { DEL_USER } from "../types/types";
+import { DEL_USER } from "../../types/types";
 import axios from "axios";
 
 const delUser = (user) => {

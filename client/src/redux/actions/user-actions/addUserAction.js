@@ -1,4 +1,4 @@
-import { ADD_USER } from "../types/types";
+import { ADD_USER } from "../../types/types";
 import axios from "axios";
 
 const newUser = (user) => {

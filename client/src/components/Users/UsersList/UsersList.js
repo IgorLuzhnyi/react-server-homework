@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { usersSelector } from "../../../redux/reducers/usersReducer";
-import getUsersCollection from "../../../redux/actions/getUsersAction";
+import getUsersCollection from "../../../redux/actions/user-actions/getUsersAction";
 import User from "../User/User";
 import { UsersListStyled } from "./UsersListStyled";
 import { useEffect } from "react";
@@ -11,7 +11,7 @@ const UsersList = () => {
 
   useEffect(() => {
     getUsersFromServer("http://localhost:4004/users");
-  }, []);
+  });
 
   const users = useSelector(usersSelector);
   // console.log(users);

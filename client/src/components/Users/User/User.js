@@ -1,11 +1,14 @@
 import { UserStyled } from "./UserStyled";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import deleteUser from "../../../redux/actions/deleteUserAction";
+import deleteUser from "../../../redux/actions/user-actions/deleteUserAction";
+import getUsersCollection from "../../../redux/actions/user-actions/getUsersAction";
 
 const User = ({ data }) => {
   const dispatch = useDispatch();
-  const { username, fullname, avatar, _id } = data;
+  const { username, fullname, avatar, _id } = data; // user_id can also be added in the destructing object
+
+  const getUsersFromServer = (url) => dispatch(getUsersCollection(url));
 
   const errImg =
     "https://i.pinimg.com/originals/ac/49/ca/ac49cade88da350474e82a8e49545c56.jpg";
@@ -13,8 +16,9 @@ const User = ({ data }) => {
   const replaceImg = () => setImgSrc(errImg);
 
   const deleteThisUser = () => {
+    // console.log(_id, username);
     dispatch(deleteUser(`http://localhost:4004/users/${_id}`));
-    window.location.reload();
+    getUsersFromServer("http://localhost:4004/users");
   };
 
   return (

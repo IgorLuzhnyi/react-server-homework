@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { AddUserStyled } from "./AddUserStyled";
 import { validationFields } from "../../../constants/constants";
-import { addUser } from "../../../redux/actions/usersActions";
+import { addUser } from "../../../redux/actions/user-actions/addUserAction";
 import { useDispatch } from "react-redux";
 
 const AddUser = () => {

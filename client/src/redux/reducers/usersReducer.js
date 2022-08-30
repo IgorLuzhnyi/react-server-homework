@@ -1,4 +1,4 @@
-import { ADD_USER, DEL_USER, GET_USERS } from "../types/types";
+import { ADD_USER, GET_USERS } from "../types/types";
 // import { v4 as uuidv4 } from "uuid";
 
 const initState = {
@@ -33,11 +33,6 @@ const usersReducer = (state = initState, action) => {
   switch (type) {
     case ADD_USER:
       return { ...state, users: [...state.users, payload] };
-    // case DEL_USER:
-    //   return {
-    //     ...state,
-    //     users: state.users.filter((user) => user.user_id !== payload),
-    //   };
     case GET_USERS:
       return { ...state, users: payload };
     default:

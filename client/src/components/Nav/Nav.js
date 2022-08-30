@@ -15,6 +15,12 @@ const Nav = () => {
           <li>
             <NavLink to="/adduser">Add User</NavLink>
           </li>
+          <li>
+            <NavLink to="/news">News</NavLink>
+          </li>
+          <li>
+            <NavLink to="/addnews">Add News</NavLink>
+          </li>
         </ul>
       </div>
     </NavStyled>
